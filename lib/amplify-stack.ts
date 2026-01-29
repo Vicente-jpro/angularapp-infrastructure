@@ -8,7 +8,7 @@ import {
 } from "@aws-cdk/aws-amplify-alpha";
 
 
-export interface AmplifyStackProps extends StackProps {
+interface AmplifyStackProps extends StackProps {
 
 }
 
@@ -24,8 +24,8 @@ export class AmplifyHostingStack extends Stack {
                 oauthToken: SecretValue.secretsManager('GITHUB_ACCESS_TOKEN2'),
         }), 
         environmentVariables: {
-            'REGION': this.region
-        }
+            REGION: this.region,
+        },
         });
 
         // Add a branch to the Amplify application
