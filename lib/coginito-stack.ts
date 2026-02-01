@@ -6,7 +6,7 @@ import { Construct } from "constructs";
 export class CognitoStack extends Stack {
 
     public readonly userPoolId: CfnOutput;
-        
+
     public readonly userPoolClientId: CfnOutput;
 
     public readonly identityPoolId: CfnOutput;
@@ -63,7 +63,7 @@ export class CognitoStack extends Stack {
             }
         });
 
-        
+
         this.userPoolId = new CfnOutput(this, 'CFUserPoolTodoWebApp', {
             value: userPool.userPoolId
         });
