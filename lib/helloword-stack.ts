@@ -21,7 +21,7 @@ export class HellowordStack extends Stack {
             sourceCodeProvider: new GitHubSourceCodeProvider({
                 owner: 'vicente-jpro',
                 repository: 'helloword',
-                oauthToken: SecretValue.secretsManager('GITHUB_ACCESS_TOKEN2'),
+                oauthToken: SecretValue.secretsManager('GITHUB_ACCESS_TOKEN3'),
         }), 
         environmentVariables: {
             REGION: this.region,

@@ -26,7 +26,7 @@ export class AmplifyHostingStack extends Stack {
             sourceCodeProvider: new GitHubSourceCodeProvider({
                 owner: 'vicente-jpro',
                 repository: 'angularapp',
-                oauthToken: SecretValue.secretsManager('GITHUB_ACCESS_TOKEN2'),
+                oauthToken: SecretValue.secretsManager('GITHUB_ACCESS_TOKEN3'),
         }), 
         environmentVariables: {
             REGION: this.region,
