@@ -9,6 +9,11 @@ import {
 
 
 interface AmplifyStackProps extends StackProps {
+    readonly userPoolId: CfnOutput;
+        
+    readonly userPoolClientId: CfnOutput;
+
+    readonly identityPoolId: CfnOutput;
 
 }
 
@@ -25,6 +30,9 @@ export class AmplifyHostingStack extends Stack {
         }), 
         environmentVariables: {
             REGION: this.region,
+            USER_POOL_ID: props?.userPoolId?.value || '',
+            USER_POOL_CLIENT_ID: props?.userPoolClientId?.value || '',
+            IDENTITY_POOL_ID: props?.identityPoolId?.value || '',
         },
         });
 
